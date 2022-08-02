@@ -14,10 +14,11 @@ public class ExtratorDeConteudoDoIMDB implements ExtratorDeConteudo {
         // popular a lista de conteudo
         for (Map<String, String> atributos : listaDeAtributos) {
             String titulo = atributos.get("title");
-            String urlImage = getUrlImageGrande(atributos.get("image"));
-            // .replaceAll("(@+)(.*).jpg$", "$l.jpg");
 
-            var conteudo = new Conteudo(titulo, urlImage);
+            // String urlImage = getUrlImageGrande(atributos.get("image"));
+            // var conteudo = new Conteudo(titulo, urlImage);
+            
+            var conteudo = new Conteudo(titulo, atributos.get("image"));
             conteudos.add(conteudo);
         }
 
